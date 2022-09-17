@@ -1,0 +1,242 @@
+:root {
+    --color1: black;
+    --color2: rgb(0,0,0);
+    --color3: rgb(0,0,0);
+    --color4: rgb(0,0,0); /*color palette*/
+}
+* {
+    font-family:poppins; /*change later*/
+}
+body,html {
+    margin: 0;
+}
+/* Navigation bar */
+#logo {
+    height:65px;
+    margin-right:30px;
+    margin-left:10px;
+}
+nav {
+    background-color: black;
+    position:fixed;
+}
+ul li {
+    width:100px;
+}
+.menu {
+    display:none;
+}
+.second-nav li {
+    width:50px;
+}
+.second-nav li a:hover {
+    cursor:pointer;
+    
+}
+.nav-links {
+    color:white;
+    text-decoration: none;
+    font-size:1.15em;
+}
+.nav-links:hover {
+    color:white;
+    text-decoration:none; /*change later*/
+}
+/**/
+#main-page {
+    transition:3s;
+    background:url("Images/main-background3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position-y:bottom;
+    background-position-x:center;
+    width:100vw;
+    height:100vh;
+}
+.layer {
+    background-color: rgba(0,0,0,0.6);
+    width:100%;
+    height:100%;
+}
+#right-bar {
+    position:absolute;
+    height:100vh;
+    right:0;
+    width:35%;
+    transition:2s;
+    background-color:rgba(176,16,48,0.2);
+    font-size:15px;
+}
+#right-bar:hover {
+    width:40%;
+    transition: 2s;
+}
+#right-bar:hover .bar-paragraph {
+    transition:1.5s;
+}
+#slogan {
+    position:absolute;
+    bottom:5%;
+    left:3%;
+    opacity:0.6;
+    font-family:DM Serif display;
+    font-size:1.8em;
+    color:white;
+    text-align:center;
+}
+#middle-part {
+    position:absolute;
+    left:20%;
+    top:48%;
+    font-size:16px;
+}
+.waiting {
+    font-family:dm serif display;
+    font-size:2.3em;
+    color:rgba(255,255,255);
+    text-align:center;
+}
+.order-now {
+    width:fit-content;
+    margin: 0 auto;
+    text-align:center;
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    padding: 5px 20px 5px 20px;
+    font-size:1.5em;
+    font-family: DM SERIF DISPLAY;
+    border: 2px solid white;
+    cursor:pointer;
+}
+.order-now:hover {
+    background-color:rgba(255,255,255,0.5);
+    color:black;
+}
+#welcome {
+    font-family:Calligraffitti;
+    color:white;
+    font-size:3em;
+    text-align:center;
+    margin: 150px auto 0 auto;
+}
+.bar-heading {
+    font-size: 1.7em;
+    margin-left:30px;
+    font-family:DM serif display;
+    color: white;
+    margin-top:50px;
+}
+.bar-paragraph {
+    width:30vw;
+    text-align:justify;
+    margin-left:40px;
+    font-size:1.2em;
+    color: rgb(170,170,170);
+    margin-top:20px;
+}
+.about-section {
+    height:30%;
+}
+.second-page {
+    width:100%;
+    height:100vh;
+    background-color:rgba(250,150,130);
+}
+main {
+}
+@media (max-width:1300px) {
+    #right-bar {
+        font-size:13px;
+    }
+    #slogan {
+        font-size:1.4em;
+    }
+    #middle-part {
+        left:15%;
+        font-size:14px;
+    }
+}
+@media (max-width:1150px) {
+    #right-bar {
+        font-size:12px;
+    }
+    #right-bar:hover {
+        width:40%;
+    }
+    #slogan {
+    }
+    #middle-part {
+        left:13%;
+        font-size:13px;
+    }
+}
+@media (max-width:900px) {
+    .bar-paragraph {
+        margin-left:20px;
+    }
+    .bar-heading {
+        margin-left:10px;
+    }
+    #middle-part {
+        left:8%;
+        font-size:13px;
+    }
+}
+@media (max-width:800px) {
+    ul li {
+        display:none !important;
+    }
+}
+@media (max-width:700px) {/*
+    .main-page {
+        background-size:123vh;
+    }*/
+    #right-bar {
+        width: 43%;
+        font-size:11px;
+    }
+    #right-bar:hover {
+        width:48%;
+    }
+    .bar-paragraph {
+        width: 38vw;
+    }
+    #middle-part {
+        left:5%;
+        font-size:10px;
+    }
+    #slogan {
+        font-size:1.2em;
+    }
+
+}
+@media (max-width:600px) {
+    #right-bar {
+        font-size:10px;
+    }
+    #middle-part {
+        font-size:9px;
+    } 
+}
+@media (max-width:500px) {
+    #right-bar {
+        font-size:9px;
+
+    }
+    #slogan {
+        font-size:1em;
+    }
+    .bar-paragraph {
+        width:36vw;
+        text-align:left;
+    }
+    #middle-part {
+        font-size:7px;
+    }
+    
+}
+@media (max-width:450px) {
+    #middle-part {
+        font-size: 6px;
+    }
+}
