@@ -167,7 +167,6 @@ ul li {
 #second-page {
     overflow:hidden;
     width:100%;
-    height:150vh;
     background: linear-gradient(
         45deg,
         rgb(161,130,98),
@@ -251,10 +250,11 @@ ul li {
     text-shadow: 1px 1px gray;
 }
 .carousel {
-    margin: 0 auto;
-    width:800px;
+    margin: 0 auto 100px auto;
+    width:60%;
 }
 .review-box {
+    font-size:20px;
     background-color: rgba(111,78,55,0.8);
     margin: 0 auto;
     border-radius: 50px;
@@ -288,17 +288,41 @@ ul li {
 
 }
 .review-par {
+    height:170px;
+    width:95%;
+    margin: 0 auto;
     text-align:center;
     margin-top:70px;  
-    font-size:21px;
+    font-size:1.1em;
     color:burlywood;
 }
 .reviewer-name {
     margin: 0 auto;
     text-align:center;
     color:white;
+    font-size:1em;
 }
-
+#footer {
+    background-color:black;
+    font-size:30px;
+    width:100%;
+    font-family:poppins;
+    color:white;
+}
+#footer-logo {
+    width:120px;
+    margin: 0 auto;
+    padding:20px 0;
+    display:block;
+}
+.footer-heading {
+    font-size:0.5em;
+    margin-top:20px;
+}
+#footer p {
+    font-size:0.5em;
+    color:gray;
+}
 @media (max-width:1300px) {
     #right-bar {
         font-size:13px;
@@ -310,6 +334,9 @@ ul li {
         left:15%;
         font-size:14px;
     }
+    .carousel {
+        width:100%;
+    }
 }
 @media (max-width:1150px) {
     #right-bar {
@@ -317,8 +344,6 @@ ul li {
     }
     #right-bar:hover {
         width:40%;
-    }
-    #slogan {
     }
     #middle-part {
         left:13%;
@@ -329,8 +354,14 @@ ul li {
     .media-scroll {
         grid-auto-columns:46%;
     }
+    #footer {
+        font-size: 25px;
+    }
 }
 @media (max-width:900px) {
+    #reviews-heading {
+        margin-top:40px;
+    }
     #best-seller-heading {
         font-size:3em;
     }
@@ -343,6 +374,14 @@ ul li {
     #middle-part {
         left:8%;
         font-size:13px;
+    }
+    .review-box {
+        font-size:16px;
+        width:500px;
+        height:330px;
+    }
+    .review-par {
+        height:110px;
     }
 }
 @media (max-width:800px) {
@@ -392,6 +431,9 @@ ul li {
 
 }
 @media (max-width:600px) {
+    #reviews-heading {
+        font-size:20px;
+    }
     .bar-paragraph {
         font-size:1.05em;
     }
@@ -403,6 +445,27 @@ ul li {
     }
     .best-seller-name {
         font-size: 20px;
+    }
+    .review-box {
+        font-size:14px;
+        width:450px;
+        height:300px;
+    }
+    .pfp {
+        top:5%;
+    }
+    .review-par {
+        margin-top:25px;
+        height:100px;
+    }
+    #footer {
+        font-size:20px;
+    }
+    #footer p {
+        text-align:center;
+    }
+    .footer-heading {
+        text-align:center;
     }
 }
 @media (max-width:500px) {
@@ -430,6 +493,14 @@ ul li {
     #slogan {
         bottom:40%;
     }
+    .review-box {
+        font-size:12px;
+        width:90%;
+        height:250px;
+    }
+    .review-par {
+        height:100px;
+    }
     
 }
 @media (max-width:450px) {
@@ -438,5 +509,9 @@ ul li {
     }
     .bar-paragraph {
         width:29vw;
+    }
+}
+@media (max-width:350px) {
+    .review-box {
     }
 }
