@@ -178,7 +178,7 @@ ul li {
     text-shadow: 2px 2px gray;
 }
 #best-seller-line {
-    max-width:1500px;
+    max-width:1300px;
     height:2px;
     background-color:rgba(255,255,255,0.2);
     position:relative;
@@ -198,7 +198,7 @@ ul li {
     text-transform: uppercase;
 }
 .layer2 {
-    background-color: rgba(0,0,0,0.83);
+    background-color: rgba(0,0,0,0.7);
     width:100%;
     height:100%;
     transition:1s;
@@ -229,7 +229,7 @@ ul li {
 
 }
 .media-scroll {
-    max-width:1500px;
+    max-width:1300px;
     display:grid;
     grid-auto-flow:column;
     grid-auto-columns:40%;
@@ -237,7 +237,13 @@ ul li {
     overflow-x:auto;
     margin: 20px auto;
 }
-
+#reviews-heading {
+    color:white;
+    text-align:center;
+    font-size:50px;
+    margin-top:50px;
+    text-shadow: 1px 1px gray;
+}
 @media (max-width:1300px) {
     #right-bar {
         font-size:13px;
@@ -285,11 +291,36 @@ ul li {
     }
 }
 @media (max-width:800px) {
+    #logo {
+        height:50px;
+    }
     ul li {
         display:none !important;
     }
     .media-scroll {
         grid-auto-columns:60%;
+    }
+    #main-page {
+        height:70vh;
+    }
+    #right-bar {
+        height:70vh;
+        font-size:9px;
+    }
+    #slogan {
+        bottom:35%;
+    }
+    #middle-part {
+        top:33.6%;
+    }
+    .bar-heading {
+        margin-top:20px;  
+    }
+    .bar-paragraph {
+        margin-top:5px;
+    }
+    #welcome {
+        margin: 120px auto 0 auto; 
     }
 }
 @media (max-width:700px) {/*
@@ -297,19 +328,8 @@ ul li {
         background-size:123vh;
     }*/
     
-    #right-bar {
-        width: 43%;
-        font-size:11px;
-    }
-    #right-bar:hover {
-        width:48%;
-    }
-    .bar-paragraph {
-        width: 38vw;
-    }
     #middle-part {
-        left:5%;
-        font-size:10px;
+        font-size:11px;
     }
     #slogan {
         font-size:1.2em;
@@ -318,9 +338,7 @@ ul li {
 
 }
 @media (max-width:600px) {
-    #right-bar {
-        font-size:10px;
-    }
+    
     #middle-part {
         font-size:9px;
     } 
@@ -333,23 +351,28 @@ ul li {
 }
 @media (max-width:500px) {
     #right-bar {
-        font-size:9px;
+        font-size:8px;
 
     }
     #slogan {
         font-size:1em;
     }
     .bar-paragraph {
-        width:36vw;
         text-align:left;
     }
     #middle-part {
-        font-size:7px;
+        font-size:8px;
     }
     
 }
 @media (max-width:450px) {
+    #right-bar {
+        font-size:7.5px;
+    }
     #middle-part {
-        font-size: 6px;
+        font-size:7px;
+    }
+    .bar-paragraph {
+        font-size:1em;
     }
 }
