@@ -14,10 +14,10 @@ body::after{
 }
 /* Scroll bars */
 ::-webkit-scrollbar {
-    background-color:gray;
+    background-color:rgb(10,10,10);
 }
 ::-webkit-scrollbar-thumb {
-    background-color:rgba(0,0,0,0.8);
+    background-color:rgba(111,78,55,0.5);
     border-radius:50px;
 }
 .media-scroll::-webkit-scrollbar {
@@ -26,6 +26,7 @@ body::after{
 }
 .media-scroll::-webkit-scrollbar-thumb {
     border-radius:150px;
+    background-color:rgba(0,0,0,0.9);
 }
 a:hover {
     color:none;
@@ -149,7 +150,7 @@ ul li {
     font-size: 1.7em;
     margin-left:30px;
     font-family:DM serif display;
-    color: white;
+    color: rgb(208,187,148);
     margin-top:50px;
 }
 .bar-paragraph {
@@ -164,13 +165,13 @@ ul li {
     height:30%;
 }
 #second-page {
-    overflow:auto;
+    overflow:hidden;
     width:100%;
-    height:100vh;
+    height:150vh;
     background: linear-gradient(
         45deg,
-        rgb(120,120,120),
-        rgb(80,80,80)
+        rgb(161,130,98),
+        rgb(111,78,55)
     ); 
 }
 #best-seller-heading {
@@ -243,12 +244,61 @@ ul li {
     margin: 20px auto;
 }
 #reviews-heading {
-    color:white;
+    color: burlywood;
     text-align:center;
-    font-size:50px;
-    margin-top:50px;
+    font-size:30px;
+    margin:100px 0 40px;
     text-shadow: 1px 1px gray;
 }
+.carousel {
+    margin: 0 auto;
+    width:800px;
+}
+.review-box {
+    background-color: rgba(111,78,55,0.8);
+    margin: 0 auto;
+    border-radius: 50px;
+    height:400px;
+    width:700px;
+}
+.pfp {
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    margin: 0 auto;
+    position:relative;
+    top:30px;
+}
+.first-review {
+    background: url("Images/pfp1.jpg");
+    background-position: 40% 4%;
+    background-size:130px;
+
+}
+.second-review {
+    background: url("Images/pfp2.jpg");
+    background-position: 40% 40%;
+    background-size:130px;
+
+}
+.third-review {
+    background: url("Images/pfp3.jpg");
+    background-position: 50% 40%;
+    background-size:120px;
+
+}
+.review-par {
+    text-align:center;
+    margin-top:70px;  
+    font-size:21px;
+    color:burlywood;
+}
+.reviewer-name {
+    margin: 0 auto;
+    text-align:center;
+    color:white;
+}
+
 @media (max-width:1300px) {
     #right-bar {
         font-size:13px;
@@ -328,14 +378,10 @@ ul li {
         margin-top:5px;
     }
     #welcome {
-        margin: 120px auto 0 auto; 
+        margin: 100px auto 0 auto; 
     }
 }
-@media (max-width:700px) {/*
-    .main-page {
-        background-size:123vh;
-    }*/
-    
+@media (max-width:700px) {
     #middle-part {
         font-size:11px;
     }
@@ -346,7 +392,9 @@ ul li {
 
 }
 @media (max-width:600px) {
-    
+    .bar-paragraph {
+        font-size:1.05em;
+    }
     #middle-part {
         font-size:9px;
     } 
@@ -359,8 +407,8 @@ ul li {
 }
 @media (max-width:500px) {
     #right-bar {
-        font-size:8px;
         height:60vh;
+        font-size:7.5px;
     }
     #second-page {
         overflow:hidden;
@@ -369,6 +417,7 @@ ul li {
         font-size:1em;
     }
     .bar-paragraph {
+        font-size:1em;
         text-align:left;
     }
     #middle-part {
@@ -384,13 +433,10 @@ ul li {
     
 }
 @media (max-width:450px) {
-    #right-bar {
-        font-size:7.5px;
-    }
     #middle-part {
         font-size:7px;
     }
     .bar-paragraph {
-        font-size:1em;
+        width:29vw;
     }
 }
