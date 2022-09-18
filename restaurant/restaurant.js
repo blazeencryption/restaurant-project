@@ -1,6 +1,7 @@
 var images = [
     "Images/main-background2.jpg",
-    "Images/main-background3.jpg"
+    "Images/main-background4.jpg",
+    "Images/main-background6.jpg"
 ]
 const thing = document.getElementById('main-page');
 var i = 0;

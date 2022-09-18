@@ -7,8 +7,28 @@
 * {
     font-family:poppins; /*change later*/
 }
+/* Scroll bars */
+::-webkit-scrollbar {
+    background-color:gray;
+}
+::-webkit-scrollbar-thumb {
+    background-color:rgba(0,0,0,0.8);
+    border-radius:50px;
+}
+.media-scroll::-webkit-scrollbar {
+    background-color:rgba(255,255,255,0.2);
+    border-radius:150px;
+}
+.media-scroll::-webkit-scrollbar-thumb {
+    border-radius:150px;
+}
+a:hover {
+    color:none;
+    text-decoration:none;
+}
 body,html {
     margin: 0;
+    scroll-behavior: smooth;
 }
 /* Navigation bar */
 #logo {
@@ -45,12 +65,12 @@ ul li {
 /**/
 #main-page {
     transition:3s;
-    background:url("Images/main-background3.jpg");
+    background:url("Images/main-background6.jpg");
+    transition-timing-function:ease-in-out;
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position-y:bottom;
     background-position-x:center;
-    width:100vw;
     height:100vh;
 }
 .layer {
@@ -64,15 +84,13 @@ ul li {
     right:0;
     width:35%;
     transition:2s;
-    background-color:rgba(176,16,48,0.2);
+    background-color:rgba(180,180,180,0.3);
     font-size:15px;
 }
 #right-bar:hover {
+    background-color:rgba(180,180,180,0.4);
     width:40%;
     transition: 2s;
-}
-#right-bar:hover .bar-paragraph {
-    transition:1.5s;
 }
 #slogan {
     position:absolute;
@@ -97,6 +115,7 @@ ul li {
     text-align:center;
 }
 .order-now {
+    transition:1s;
     width:fit-content;
     margin: 0 auto;
     text-align:center;
@@ -109,10 +128,12 @@ ul li {
     cursor:pointer;
 }
 .order-now:hover {
+    transition:1s;
     background-color:rgba(255,255,255,0.5);
     color:black;
 }
 #welcome {
+    text-shadow: 2px 2px gray;
     font-family:Calligraffitti;
     color:white;
     font-size:3em;
@@ -131,19 +152,92 @@ ul li {
     text-align:justify;
     margin-left:40px;
     font-size:1.2em;
-    color: rgb(170,170,170);
+    color: rgb(220,220,220);
     margin-top:20px;
 }
 .about-section {
     height:30%;
 }
-.second-page {
+#second-page {
+    overflow:auto;
     width:100%;
     height:100vh;
-    background-color:rgba(250,150,130);
+    background: linear-gradient(
+        45deg,
+        rgb(120,120,120),
+        rgb(60,60,60)
+    ); 
 }
-main {
+#best-seller-heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-size:70px;
+    color:white;
+    font-family: dm serif display;
+    margin: 100px auto 10px auto;
+    text-shadow: 2px 2px gray;
 }
+#best-seller-line {
+    max-width:1500px;
+    height:2px;
+    background-color:rgba(0,0,0,0.5);
+    position:relative;
+    width:100%;
+}
+.best-seller-box {
+    margin-bottom: 5px;
+    width:100%;
+    height:35vh;
+    background-position: center !important;
+    background-size:cover !important;
+}
+.best-seller-name {
+    font-family: dm serif display;
+    font-size:30px;
+    color:rgba(255,255,255,0.5);
+    text-transform: uppercase;
+}
+.layer2 {
+    background-color: rgba(0,0,0,0.83);
+    width:100%;
+    height:100%;
+    transition:1s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.layer2:hover {
+    background-color: rgba(0,0,0,0.5);
+    transition:1s;
+}
+.check {
+    background-color:blue;
+}
+#burger {
+    background: url("Images/burger.jpg") no-repeat;
+
+}
+#wings {
+    background: url(Images/wings.jpg) no-repeat;
+}
+#steak {
+    background: url(Images/steak.jpg) no-repeat;
+
+}
+#salmon {
+    background: url(Images/salmon.jpg) no-repeat;
+
+}
+.media-scroll {
+    max-width:1500px;
+    display:grid;
+    grid-auto-flow:column;
+    grid-auto-columns:40%;
+    gap:0.1rem;
+    overflow-x:auto;
+    margin: 20px auto;
+}
+
 @media (max-width:1300px) {
     #right-bar {
         font-size:13px;
@@ -170,7 +264,15 @@ main {
         font-size:13px;
     }
 }
+@media (max-width:1000px) {
+    .media-scroll {
+        grid-auto-columns:46%;
+    }
+}
 @media (max-width:900px) {
+    #best-seller-heading {
+        font-size:3em;
+    }
     .bar-paragraph {
         margin-left:20px;
     }
@@ -186,11 +288,15 @@ main {
     ul li {
         display:none !important;
     }
+    .media-scroll {
+        grid-auto-columns:60%;
+    }
 }
 @media (max-width:700px) {/*
     .main-page {
         background-size:123vh;
     }*/
+    
     #right-bar {
         width: 43%;
         font-size:11px;
@@ -208,6 +314,7 @@ main {
     #slogan {
         font-size:1.2em;
     }
+    
 
 }
 @media (max-width:600px) {
@@ -217,6 +324,12 @@ main {
     #middle-part {
         font-size:9px;
     } 
+    .media-scroll {
+        grid-auto-columns:80%;
+    }
+    .best-seller-name {
+        font-size: 20px;
+    }
 }
 @media (max-width:500px) {
     #right-bar {
