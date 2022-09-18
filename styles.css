@@ -360,6 +360,7 @@ ul li {
 @media (max-width:500px) {
     #right-bar {
         font-size:8px;
+        height:60vh;
     }
     #second-page {
         overflow:hidden;
@@ -371,7 +372,14 @@ ul li {
         text-align:left;
     }
     #middle-part {
+        top:30%;
         font-size:8px;
+    }
+    #main-page {
+        height:60vh;
+    }
+    #slogan {
+        bottom:41%;
     }
     
 }
