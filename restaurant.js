@@ -11,5 +11,11 @@ setInterval(function() {
       if (i == images.length) {
         i =  0;
       }
-      console.log("url(" + images[i] + ")");
 }, 8000);
+$(".carousel").swipe({
+  swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      if (direction == 'left') $(this).carousel('next');
+      if (direction == 'right') $(this).carousel('prev');
+  },
+  allowPageScroll: "vertical" 
+});
