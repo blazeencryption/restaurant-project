@@ -7,6 +7,11 @@
 * {
     font-family:poppins; /*change later*/
 }
+/*Preload Images*/
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content:url(Images/main-background4.jpg) url(Images/main-background2.jpg);
+}
 /* Scroll bars */
 ::-webkit-scrollbar {
     background-color:gray;
@@ -291,6 +296,9 @@ ul li {
     }
 }
 @media (max-width:800px) {
+    #best-seller-heading {
+        margin-top:20px;
+    }
     #logo {
         height:50px;
     }
@@ -308,7 +316,7 @@ ul li {
         font-size:9px;
     }
     #slogan {
-        bottom:35%;
+        bottom:31%;
     }
     #middle-part {
         top:33.6%;
@@ -352,7 +360,9 @@ ul li {
 @media (max-width:500px) {
     #right-bar {
         font-size:8px;
-
+    }
+    #second-page {
+        overflow:hidden;
     }
     #slogan {
         font-size:1em;
