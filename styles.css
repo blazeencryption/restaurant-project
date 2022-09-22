@@ -4,6 +4,7 @@
     --color3: rgb(0,0,0);
     --color4: rgb(0,0,0); /*color palette*/
 }
+
 * {
     font-family:poppins; /*change later*/
     -webkit-user-select: none; /* Safari */
@@ -142,6 +143,15 @@ ul li {
     transition:1s;
     background-color:rgba(255,255,255,0.5);
     color:black;
+}
+.order-now a {
+    text-decoration:none;
+    color:inherit;
+    font-family: inherit;
+}
+.order-now a:hover {
+    color:inherit;
+    text-decoration:none;
 }
 #welcome {
     text-shadow: 2px 2px gray;
