@@ -3,8 +3,8 @@
 
 <head>
   <link rel="stylesheet" href="styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="restaurant.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu</title>
   <link rel="shortcut icon" type="image/x-icon" href="Images/web-logo.png" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calligraffitti">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
 </head>
 
 <body>
@@ -54,14 +55,14 @@
     </nav>
     <div class="menu-page">
       <div id="category-bar">
-        <a class="category">All</a>
-        <a class="category">Main Dishes</a>
-        <a class="category">Appetizers</a>
-        <a class="category">Salads</a>
-        <a class="category">Desserts</a>
+        <a onclick="reveal_class('all')" class="category">All</a>
+        <a onclick="reveal_class('main-dish')" class="category">Main Dishes</a>
+        <a onclick="reveal_class('side-dish')" class="category">Appetizers</a>
+        <a onclick="reveal_class('salad')" class="category">Salads</a>
+        <a onclick="reveal_class('dessert')" class="category">Desserts</a>
       </div>
       <div id="items-section" class="container-fluid">
-        <div class="card" style="width: 25%;">
+        <div class="card main-dish all" style="width: 25%;">
           <div class="card-img-top bbq-burger-card">
             <div class="card-description" id="idbbqburger">
               <h2 class="card-description-text bbqburger-text">Ingredients:</h2>
@@ -78,11 +79,11 @@
                 <path
                   d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
               </svg>
-              <div onclick="addtocart('bbq-burger-check-out','5')" class="add-button">Add</div>
+              <div onclick="addtocart('BBQ Burger','Images/burger.jpg', 5, 'idbbqburger')" class="add-button">Add</div>
             </div>
           </div>
         </div>
-        <div class="card" style="width: 25%;">
+        <div class="card main-dish all" style="width: 25%;">
           <div class="card-img-top salmon-card">
             <div class="card-description" id="idsalmon">
               <h2 class="card-description-text salmon-text">Ingredients:</h2>
@@ -99,11 +100,11 @@
                 <path
                   d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
               </svg>
-              <div onclick="addtocart('salmon-check-out','20')"class="add-button">Add</div>
+              <div onclick="addtocart('Grilled Salmon','Images/salmon.jpg', 20, 'idsalmon')" class="add-button">Add</div>
             </div>
           </div>
         </div>
-        <div class="card" style="width: 25%;">
+        <div class="card main-dish all" style="width: 25%;">
           <div class="card-img-top shrimp-card">
             <div class="card-description" id="idshrimp">
               <h2 class="card-description-text shrimp-text">Ingredients:</h2>
@@ -121,11 +122,11 @@
                 <path
                   d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
               </svg>
-              <div class="add-button">Add</div>
+              <div onclick="addtocart('Fried Shrimps','Images/shrimp.jpg', 18, 'idshrimp')" class="add-button">Add</div>
             </div>
           </div>
         </div>
-        <div class="card" style="width: 25%;">
+        <div class="card main-dish all" style="width: 25%;">
           <div class="card-img-top beef-kebab-card">
             <div class="card-description" id="idbeefkebab">
               <h2 class="card-description-text beef-kebab-text">Ingredients:</h2>
@@ -143,11 +144,11 @@
                 <path
                   d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
               </svg>
-              <div class="add-button">Add</div>
+              <div onclick="addtocart('Beef Kebab','Images/beef-kabab.jpg', 12, 'idbeefkebab')" class="add-button">Add</div>
             </div>
           </div>
         </div>
-        <div class="card" style="width: 25%;">
+        <div class="card main-dish all" style="width: 25%;">
           <div class="card-img-top chicken-kebab-card">
             <div class="card-description" id="idchickenkebab">
               <h2 class="card-description-text chicken-kebab-text">Ingredients:</h2>
@@ -165,11 +166,32 @@
                 <path
                   d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
               </svg>
-              <div class="add-button">Add</div>
+              <div onclick="addtocart('Chicken Kebab','Images/chicken-kabab.jpg', 12, 'idchickenkebab')" class="add-button">Add</div>
             </div>
           </div>
         </div>
-        <div class="card" style="width: 25%;">
+        <div class="card main-dish all" style="width: 25%;">
+          <div class="card-img-top steak-card">
+            <div class="card-description" id="idsteak">
+              <h2 class="card-description-text steak-text">Ingredients:</h2>
+              <p class="card-description-text steak-text">Top Sirloin steaks, sea salt, black pepper, garlic, rosemary, unsalted butter</p>
+              <h2 class="card-description-text steak-text">Price</h2>
+              <p class="card-description-text steak-text">17$</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-text">Steak</span>
+            <div class="right-part-card">
+              <svg onclick="description('idsteak','steak-text')" xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+              </svg>
+              <div onclick="addtocart('Steak','Images/steak.jpg', 17, 'idsteak')" class="add-button">Add</div>
+            </div>
+          </div>
+        </div>
+        <div class="card main-dish all" style="width: 25%;">
           <div class="card-img-top chicken-wings-card">
             <div class="card-description" id="idchickenwings">
               <h2 class="card-description-text chicken-wings-text">Ingredients:</h2>
@@ -187,11 +209,11 @@
                 <path
                   d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
               </svg>
-              <div class="add-button">Add</div>
+              <div onclick="addtocart('Fried Chicken Wings','Images/wings2.jpg', 6, 'idchickenwings')" class="add-button">Add</div>
             </div>
           </div>
         </div>
-        <div class="card" style="width: 25%;">
+        <div class="card main-dish all" style="width: 25%;">
           <div class="card-img-top sausage-card">
             <div class="card-description" id="idsausage">
               <h2 class="card-description-text sausage-text">Ingredients:</h2>
@@ -209,11 +231,11 @@
                 <path
                   d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
               </svg>
-              <div class="add-button">Add</div>
+              <div onclick="addtocart('Sausages','Images/sausage.jpg', 9, 'idsausage')" class="add-button">Add</div>
             </div>
           </div>
         </div>
-        <div class="card" style="width: 25%;">
+        <div class="card salad all" style="width: 25%;">
           <div class="card-img-top ceaser-salad-card">
             <div class="card-description" id="idceasersalad">
               <h2 class="card-description-text ceaser-salad-text">Ingredients:</h2>
@@ -231,11 +253,11 @@
                 <path
                   d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
               </svg>
-              <div class="add-button">Add</div>
+              <div onclick="addtocart('Ceaser Salad','Images/ceaser-salad.jpg', 3, 'idceasersalad')" class="add-button">Add</div>
             </div>
           </div>
         </div>
-        <div class="card" style="width: 25%;">
+        <div class="card salad all" style="width: 25%;">
           <div class="card-img-top tomato-salad-card">
             <div class="card-description" id="idtomatosalad">
               <h2 class="card-description-text tomato-salad-text">Ingredients:</h2>
@@ -253,110 +275,196 @@
                 <path
                   d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
               </svg>
-              <div class="add-button">Add</div>
+              <div onclick="addtocart('Tomato Salad','Images/tomato-salad.jpg', 3, 'idtomatosalad')" class="add-button">Add</div>
             </div>
           </div>
+        </div>
+        <div class="card side-dish all" style="width: 25%;">
+          <div class="card-img-top onion-rings-card">
+            <div class="card-description" id="idonionrings">
+              <h2 class="card-description-text onion-rings-text">Ingredients:</h2>
+              <p class="card-description-text onion-rings-text">Sweet onion, flour, baking powder, salt, milk, egg, bread crumbs</p>
+              <h2 class="card-description-text onion-rings-text">Price</h2>
+              <p class="card-description-text onion-rings-text">4$</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-text">Onion Rings</span>
+            <div class="right-part-card">
+              <svg onclick="description('idonionrings','onion-rings-text')" xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+              </svg>
+              <div onclick="addtocart('Onion Rings','Images/onion-rings.jpg', 4, 'idonionrings')" class="add-button">Add</div>
+            </div>
+          </div>
+        </div>
+        <div class="card side-dish all" style="width: 25%;">
+          <div class="card-img-top garlic-bread-card">
+            <div class="card-description" id="idgarlicbread">
+              <h2 class="card-description-text garlic-bread-text">Ingredients:</h2>
+              <p class="card-description-text garlic-bread-text">Italian bread, unsalted butter, garlic, parsley, Parmesan cheese</p>
+              <h2 class="card-description-text garlic-bread-text">Price</h2>
+              <p class="card-description-text garlic-bread-text">4.5$</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-text">Garlic Bread</span>
+            <div class="right-part-card">
+              <svg onclick="description('idgarlicbread','garlic-bread-text')" xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+              </svg>
+              <div onclick="addtocart('Garlic Bread','Images/garlic-bread.jpg', 4.5, 'idgarlicbread')" class="add-button">Add</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card side-dish all" style="width: 25%;">
+          <div class="card-img-top wedges-card">
+            <div class="card-description" id="idwedges">
+              <h2 class="card-description-text wedges-text">Ingredients:</h2>
+              <p class="card-description-text wedges-text">Potato, salt, pepper, garlic powder, dried oregano, paprika, parmesan cheese</p>
+              <h2 class="card-description-text wedges-text">Price</h2>
+              <p class="card-description-text wedges-text">3$</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-text">Potato wedges</span>
+            <div class="right-part-card">
+              <svg onclick="description('idwedges','wedges-text')" xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+              </svg>
+              <div onclick="addtocart('Potato wedges','Images/wedges.jpg', 3, 'idwedges')" class="add-button">Add</div>
+            </div>
+          </div>
+        </div>
+        <div class="card dessert all" style="width: 25%;">
+          <div class="card-img-top french-toast-card">
+            <div class="card-description" id="idfrenchtoast">
+              <h2 class="card-description-text french-toast-text">Ingredients:</h2>
+              <p class="card-description-text french-toast-text">Egg, cinnamon, milk, bread, maple syrup</p>
+              <h2 class="card-description-text french-toast-text">Price</h2>
+              <p class="card-description-text french-toast-text">6$</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-text">French Toast</span>
+            <div class="right-part-card">
+              <svg onclick="description('idfrenchtoast','french-toast-text')" xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+              </svg>
+              <div onclick="addtocart('French Toast','Images/french-toast.jpg', 6, 'idfrenchtoast')" class="add-button">Add</div>
+            </div>
+          </div>
+        </div>
+        <div class="card dessert all" style="width: 25%;">
+          <div class="card-img-top crepe-card">
+            <div class="card-description" id="idcrepe">
+              <h2 class="card-description-text crepe-text">Ingredients:</h2>
+              <p class="card-description-text crepe-text">Flour, eggs, water, melted butter, nutella spread</p>
+              <h2 class="card-description-text crepe-text">Price</h2>
+              <p class="card-description-text crepe-text">5$</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-text">Chocolate Crepe</span>
+            <div class="right-part-card">
+              <svg onclick="description('idcrepe','crepe-text')" xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+              </svg>
+              <div onclick="addtocart('Crepe','Images/crepe.jpg', 5, 'idcrepe')" class="add-button">Add</div>
+            </div>
+          </div>
+        </div>
+        <div class="card dessert all" style="width: 25%;">
+          <div class="card-img-top cheese-cake-card">
+            <div class="card-description" id="idcheesecake">
+              <h2 class="card-description-text cheese-cake-text">Ingredients:</h2>
+              <p class="card-description-text cheese-cake-text">Flour, eggs, granulated sugar, lemon juice, sour cream, unsalted butter, blueberry toppings</p>
+              <h2 class="card-description-text cheese-cake-text">Price</h2>
+              <p class="card-description-text cheese-cake-text">6$</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-text">Cheese cake</span>
+            <div class="right-part-card">
+              <svg onclick="description('idcheesecake','cheese-cake-text')" xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+              </svg>
+              <div onclick="addtocart('Cheese Cake','Images/cheesecake.jpg', 6, 'idcheesecake')" class="add-button">Add</div>
+            </div>
+          </div>
+        </div>
+        <div class="card dessert all" style="width: 25%;">
+          <div class="card-img-top lava-cake-card">
+            <div class="card-description" id="idlavacake">
+              <h2 class="card-description-text lava-cake-text">Ingredients:</h2>
+              <p class="card-description-text lava-cake-text">Bittersweet chocolate, eggs, sugar, flour, unsalted butter</p>
+              <h2 class="card-description-text lava-cake-text">Price</h2>
+              <p class="card-description-text lava-cake-text">8$</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-text">Lava Cake</span>
+            <div class="right-part-card">
+              <svg onclick="description('idlavacake','lava-cake-text')" xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+              </svg>
+              <div onclick="addtocart('Lava Cake','Images/lava-cake.jpg', 8, 'idlavacake')" class="add-button">Add</div>
+            </div>
+          </div>
+        </div>
       </div>
       
-      
-    </div>
-    <div id="check-out-bar" class="">
-      <div class="check-out-card" id="bbq-burger-check-out">
-        <div class="check-out-image-section">
-          <img class='check-out-image' src="Images/burger.jpg">
+      <div id="check-out-bar">
+        <div onclick="check_out()" id="check-out-button">
+          <p>Place Your Order</p>
+          <p id="price-part-check-out">Price: <span id="sumprice">0$</span></p>
         </div>
-        <div class="check-out-option-section">
-          <h1>BBQ Burger</h1>
-          
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-          </svg>
-        </div>
-      </div><!--
-      <div class="check-out-card bbq-burger-check-out">
-        <h1>BBQ Burger</h1>
-        <img src="Images/burger.jpg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-        </svg>-->
-      </div><!--
-      <div class="check-out-card salmon-check-out">
-        <h1>Salmon</h1>
-        <img src="Images/burger.jpg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-        </svg>
       </div>
-      <div class="check-out-card shrimps-check-out">
-        <h1>Shrimps</h1>
-        <img src="Images/burger.jpg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-        </svg>
-      </div>
-      <div class="check-out-card beef-kebab-check-out">
-        <h1>Beef Kebab</h1>
-        <img src="Images/burger.jpg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-        </svg>
-      </div>-->
-    </div>
     </div>
     <div id="footer">
       <div class="container">
-          <img src="Images/logo.png" id="footer-logo">
-          <div class="row footer-row">
-              <div class="col-lg-4 col-sm-4">
-                  <h4 id="footer-opening-hours" class="footer-heading">Opening hours</h4>
-                  <p>Throughout the week <br>from 10am --> 11pm</p>
-              </div>
-              <div class="col-lg-4 col-sm-4">
-                  <h4 id="footer-locations" class="footer-heading">Locations</h4>
-                  <p>Jounieh - Ein El Mreiseh sector</p>
-              </div>
-              <div class="col-lg-4 col-sm-4">
-                  <h4 id="footer-contact" class="footer-heading">Contact</h4>
-                  <p>Email: bakeandgrill@gmail.com</p>
-              </div>
+        <img src="Images/logo.png" id="footer-logo">
+        <div class="row footer-row">
+          <div class="col-lg-4 col-sm-4">
+            <h4 id="footer-opening-hours" class="footer-heading">Opening hours</h4>
+            <p>Throughout the week <br>from 10am --> 11pm</p>
           </div>
+          <div class="col-lg-4 col-sm-4">
+            <h4 id="footer-locations" class="footer-heading">Locations</h4>
+            <p>Jounieh - Ein El Mreiseh sector</p>
+          </div>
+          <div class="col-lg-4 col-sm-4">
+            <h4 id="footer-contact" class="footer-heading">Contact</h4>
+            <p>Email: bakeandgrill@gmail.com</p>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
-    </main>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  </main>
 </body>
 
 </html>
