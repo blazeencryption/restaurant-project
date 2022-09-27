@@ -50,9 +50,12 @@ body,html {
 nav {
     background-color: black;
     position:fixed;
+    height:80px;
 }
-ul li {
+.nav-item {
     width:100px;
+    display:flex;
+    justify-content: center;
 }
 .menu-nav {
     display:none;
@@ -62,16 +65,19 @@ ul li {
 }
 .second-nav li a:hover {
     cursor:pointer;
-    
 }
-.nav-links {
+.nav-link {
+    padding: 30px 0px;
+    cursor:pointer;
+    height:100%;
     color:white;
     text-decoration: none;
     font-size:1.15em;
 }
-.nav-links:hover {
+.nav-link:hover {
+    background-color: rgb(40,40,40);  
     color:white;
-    text-decoration:none; /*change later*/
+    text-decoration:none;
 }
 /**/
 #main-page {
@@ -349,26 +355,27 @@ main {
     min-height:100%;
     width:100%;
     display:flex;
-    background-color:rgb(161,130,98); /*Change later*/
+    background-color: rgb(161,130,98); /*Change later*/
 }
 #category-bar {
     z-index:1;
     position:fixed;
     width:200px;
     height:100%;
-    background-color: rgb(137, 96, 67); /*Change later*/
+    background-color: rgb(102, 71, 51); /*Change later*/
     display:flex;
     flex-direction:column;
 }
 .category {
     font-size:18px;
-    padding-top:30px;
-    padding-bottom:30px;
+    padding-top:40px;
+    padding-bottom:40px;
     cursor:pointer;
     text-decoration:none;
     padding-left:30px;
-    color:black !important;
-    font-weight:800;
+    color: beige!important;
+    font-weight:500;
+    letter-spacing: 1px;
     display:flex;
 }
 .category:first-child {
@@ -411,18 +418,18 @@ main {
     align-items:center;
 }
 #check-out-bar {
+    overflow-y: auto;
     z-index:2;
     color:white;
     padding-top:82px;
     width:0px;
     position:fixed;
     right:0%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.9);
     height:100%;
     transition:1s;
 }
 .opened-check-out-bar {
-    overflow-y:auto;
     transition: 1.5s !important;
     width:400px !important;
     display:block !important;
@@ -456,6 +463,18 @@ main {
     background-color:white;
     border-radius:30%;
     cursor:pointer;
+}
+.info-button {
+    font-weight:900;
+    margin-right:10px;
+    position:relative;
+    background-color:white;
+    border-radius: 10px;
+    cursor:pointer;
+    padding: 0 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 .add-button {
     background-color: #00c04b;
@@ -557,7 +576,7 @@ main {
     display:block;
     width:100%;
     height:100px;
-    border: 1px solid rgb(161,130,98);
+    border: 1px solid white;
 }
 .check-out-image-section{
     float:left;
@@ -571,10 +590,12 @@ main {
     height:300px;
 }
 .check-out-heading {
-    font-size:25Spx;
+    position:relative;
+    top:5px;
+    font-size:25px;
 }
 .check-out-image {
-    border-right: 1px solid rgb(161,130, 98);
+    border-right: 1px solid white;
     object-fit: cover;
     width:150px;
     height:95px;
@@ -584,6 +605,7 @@ main {
     color:#00c04b;
 }
 #check-out-button {
+    z-index:3;
     text-align:center;
     color:white;
     background-color:#00c04b;
@@ -608,6 +630,75 @@ main {
     position:relative;
     bottom:10px;
     font-size:12px;
+}
+/*Contact page */
+#contact-page {
+    width:100%;
+    padding-left:50px;
+    background-color:burlywood;
+    height:100%;
+    display:flex;
+    align-items: center;
+}
+#contact-information-section {
+    font-size:0.9em;
+    margin-left:10px;
+    margin-top:20px;
+}
+#opening-hours-heading, #contact-heading  {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px rgb(111,78,55);
+}
+#opening-hours-heading {
+    margin-top:150px;
+}
+#opening-hours-par {
+    font-size: 0.9em;
+    margin-left:5px;
+}
+
+#contact-us-section {
+}
+#contact-picture {
+    width:300px;
+}
+/*Contact Input CSS*/
+fieldset {
+    display:block;
+    width:400px;
+}
+#name-labels {
+    display:flex;
+    justify-content:space-between;
+}
+input, textarea {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 3px rgb(111,78,55);
+}
+#message-label, #email-label {
+    width:100%;
+}
+#contact-textarea, #email-input {
+    width:100%;
+    resize:none;
+}
+#first-name-label, #last-name-label {
+    width:45%;
+}
+#name-input, #last-name-input {
+    width:100%;
+}
+.row {
+    width:100%; 
+}
+#email-label, #message-label {
+    display:block;
+
+}
+#input {
+
 }
 @media (max-width:1700px) {
     .card {
@@ -681,9 +772,6 @@ main {
     }
     #logo {
         height:50px;
-    }
-    ul li {
-        display:none !important;
     }
     .media-scroll {
         grid-auto-columns:60%;
