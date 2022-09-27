@@ -49,6 +49,8 @@ function addtocart(name, img, price, product_class) {
   if (product_exists === 1) {
     var price_elements = document.getElementsByClassName(product_class);
     var quantity_elements = document.getElementsByClassName(product_class + "quantity");
+    products_sum += price
+    document.getElementById('sumprice').innerHTML = products_sum + '$';
     Array.from(price_elements).forEach(price_element => {
       price_element.removeChild(price_element.lastChild);
       new_price = document.createTextNode(product_object['quantity'] * price+ '$');
