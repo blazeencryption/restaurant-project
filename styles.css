@@ -79,6 +79,10 @@ nav {
     color:white;
     text-decoration:none;
 }
+.bi-cart {
+    font-weight:900;
+    font-size:150px;
+}
 /**/
 #main-page {
     transition:3s;
@@ -769,6 +773,12 @@ input, textarea {
 @media (max-width:800px) {
     #best-seller-heading {
         margin-top:20px;
+    }
+    .nav-item {
+        display:none;
+    }
+    .media-links {
+        display:none;
     }
     #logo {
         height:50px;
