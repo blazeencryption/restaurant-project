@@ -1,0 +1,17 @@
+Change color of check-out bar //
+Fix category sorting //
+Add Dessert elements //
+Replace dots icons with info //
+clear menu on checkout //
+Add quantity variable next to cart on nav bar //
+get a more detailed logo //
+add contact page //
+Fix paragraph on main page //
+
+
+- make popup responsive
+- make contact page responsive
+(Optional): 
+- Add remove button to element on menu page
+- create add and subtract buttons next to quantity on each element
+
