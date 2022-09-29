@@ -6,6 +6,7 @@
 }
 
 * {
+    transition: none !important;
     font-family:poppins; /*change later*/
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
@@ -656,7 +657,6 @@ nav {
 }
 .sausage-card {
     background-image: url(Images/sausage.jpg);
-    background-size:105%;
 }
 .ceaser-salad-card {
     background-image: url(Images/ceaser-salad.jpg);
@@ -888,7 +888,7 @@ input, textarea {
 }
 @media (max-width:1600px) {
     .sausage-card {
-        background-size:325px !important;
+        background-size:325px;
     }
     #items-section {
         padding-left:200px;
@@ -924,7 +924,7 @@ input, textarea {
         font-size:12px;
     }
     .card-img-top:hover {
-        background-size:380px !important;
+        background-size:380px;
         transition:2s !important;
     }
 }
@@ -1269,10 +1269,6 @@ input, textarea {
     .add-button {
         width:32px;
         font-size: 7px;
-    }
-    .card-img-top:hover {
-        background-size:380px;
-        transition:2s !important;
     }
 }
 @media (max-width:450px) {
