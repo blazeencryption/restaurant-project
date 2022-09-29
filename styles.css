@@ -6,7 +6,6 @@
 }
 
 * {
-    transition: none !important;
     font-family:poppins; /*change later*/
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
