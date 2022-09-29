@@ -102,7 +102,10 @@ function addtocart(name, img, price, product_class) {
       product_price: price,
       quantity : 1
     });
-    document.getElementById('cart-quantity').innerHTML= product.length;
+    const cart_numbers = document.getElementsByClassName('cart-quantity');
+    Array.from(cart_numbers).forEach(cart_number => {
+      cart_number.innerHTML = product.length;
+    });
   }
 }
 function reveal_class(category_class) {
@@ -122,7 +125,10 @@ function check_out() {
   product = [];
   products_sum = 0;
   product_exists = 0;
-  document.getElementById('cart-quantity').innerHTML= product.length;
+  const cart_numbers = document.getElementsByClassName('cart-quantity');
+  Array.from(cart_numbers).forEach(cart_number => {
+    cart_number.innerHTML = product.length;
+  });
   const check_out_bar = document.getElementById('check-out-bar');
   const check_out_card = document.getElementsByClassName('check-out-card');
   document.getElementById('sumprice').innerHTML = products_sum + '$';
