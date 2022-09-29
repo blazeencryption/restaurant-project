@@ -888,7 +888,7 @@ input, textarea {
 }
 @media (max-width:1600px) {
     .sausage-card {
-        background-size: 110% !important;
+        background-size:325px !important;
     }
     #items-section {
         padding-left:200px;
@@ -924,7 +924,7 @@ input, textarea {
         font-size:12px;
     }
     .card-img-top:hover {
-        background-size:380px;
+        background-size:380px !important;
         transition:2s !important;
     }
 }
@@ -992,6 +992,9 @@ input, textarea {
     .card-img-top {
         background-size:220px;
     }
+    .card-img-top:hover {
+        background-size:275px;
+    }
     .info-button {
         width: 30px;
         font-size:10px;
@@ -1032,6 +1035,9 @@ input, textarea {
         justify-content: center;
     }
     .opened-check-out-bar {
+        width:300px !important;
+    }
+    #check-out-button {
         width:300px !important;
     }
     .media-scroll {
@@ -1207,6 +1213,9 @@ input, textarea {
     .card-img-top {
         background-size:150px;
     }
+    .card-img-top:hover {
+        background-size:188px;
+    }
     #right-bar {
         height:60vh;
         font-size:7.5px;
@@ -1238,9 +1247,6 @@ input, textarea {
     }
     .review-par {
         height:100px;
-    }
-    .sausage-card {
-        background-size:103%;
     }
     .card-description-text-heading, .card-description-text-p {
         width: 135px;
