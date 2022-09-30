@@ -1,6 +1,7 @@
 product = []
 products_sum = 0
 product_exists = 0
+opened_cat = 'closed'
 opened_nav = 'closed'
 var images = [
     "Images/main-background2.jpg",
@@ -155,7 +156,16 @@ function remove_popup() {
   document.getElementById('popup').style.opacity="0";
   document.getElementById('popup').style.zIndex="-100";
 }
-
-
+function opencat() {
+  if (opened_cat === 'closed') {
+    document.getElementById('responsive-elements').style.display="block";
+    document.getElementById('down-arrow').innerHTML='⮾';
+    opened_cat = 'opened';
+  } else {
+    document.getElementById('down-arrow').innerHTML="▼";
+    document.getElementById('responsive-elements').style.display="none";
+    opened_cat = 'closed';
+  }
+}
 
 

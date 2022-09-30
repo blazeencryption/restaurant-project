@@ -94,6 +94,7 @@
       </div>
     </div>
     <div id="responsive-category-bar">
+      <h1 onclick="opencat()" id="responsive-cat-heading">Categories <span id="down-arrow">▼</span></h1>
       <div id="responsive-elements">
         <a onclick="reveal_class('all')" class="responsive-category">All</a>
         <a onclick="reveal_class('main-dish')" class="responsive-category">Main Dishes</a>
@@ -112,288 +113,287 @@
         <a onclick="reveal_class('dessert')" class="category">Desserts</a>
       </div>
       
-      <div id="items-section">
-        <div class="card main-dish all" style="width: 25%;">
-          <div class="card-img-top bbq-burger-card">
-            <div class="card-description" id="idbbqburger">
-              <h2 class="card-description-text-heading bbqburger-text">Ingredients:</h2>
-              <p class="card-description-text-p bbqburger-text">Grilled Beef, Onion, pepper, Barbecue sauce</p>
-              <h2 class="card-description-text-heading bbqburger-text">Price: <span class="card-price">5.5$</span></h2>
+        <div id="items-section">
+          <div class="card main-dish all" style="width: 25%;">
+            <div class="card-img-top bbq-burger-card">
+              <div class="card-description" id="idbbqburger">
+                <h2 class="card-description-text-heading bbqburger-text">Ingredients:</h2>
+                <p class="card-description-text-p bbqburger-text">Grilled Beef, Onion, pepper, Barbecue sauce</p>
+                <h2 class="card-description-text-heading bbqburger-text">Price: <span class="card-price">5.5$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">BBQ Burger</span>
+              <div class="right-part-card">
+                <div onclick="description('idbbqburger', 'bbqburger-text')" class="info-button">info</div>
+                
+                <div onclick="addtocart('BBQ Burger','Images/burger.jpg', 5, 'idbbqburger')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <span class="card-text">BBQ Burger</span>
-            <div class="right-part-card">
-              <div onclick="description('idbbqburger', 'bbqburger-text')" class="info-button">info</div>
-              
-              <div onclick="addtocart('BBQ Burger','Images/burger.jpg', 5, 'idbbqburger')" class="add-button">Add</div>
+          <div class="card main-dish all" style="width: 25%;">
+            <div class="card-img-top salmon-card">
+              <div class="card-description" id="idsalmon">
+                <h2 class="card-description-text-heading salmon-text">Ingredients:</h2>
+                <p class="card-description-text-p salmon-text">salmon fillets, lemmon pepper, garlic powder, soy sauce</p>
+                <h2 class="card-description-text-heading salmon-text">Price: <span class="card-price">20$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Grilled Salmon</span>
+              <div class="right-part-card">
+                <div onclick="description('idsalmon', 'salmon-text')" class="info-button">info</div>
+                <div onclick="addtocart('Grilled Salmon','Images/salmon.jpg', 20, 'idsalmon')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card main-dish all" style="width: 25%;">
-          <div class="card-img-top salmon-card">
-            <div class="card-description" id="idsalmon">
-              <h2 class="card-description-text-heading salmon-text">Ingredients:</h2>
-              <p class="card-description-text-p salmon-text">salmon fillets, lemmon pepper, garlic powder, soy sauce</p>
-              <h2 class="card-description-text-heading salmon-text">Price: <span class="card-price">20$</span></h2>
+          <div class="card main-dish all" style="width: 25%;">
+            <div class="card-img-top shrimp-card">
+              <div class="card-description" id="idshrimp">
+                <h2 class="card-description-text-heading shrimp-text">Ingredients:</h2>
+                <p class="card-description-text-p shrimp-text">peeled shrimp, parsley, fresh basil, tomato paste, black
+                  pepper</p>
+                <h2 class="card-description-text-heading shrimp-text">Price: <span class="card-price">18$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Fried Shrimps</span>
+              <div class="right-part-card">
+                <div onclick="description('idshrimp', 'shrimp-text')" class="info-button">info</div>
+                <div onclick="addtocart('Fried Shrimps','Images/shrimp.jpg', 18, 'idshrimp')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <span class="card-text">Grilled Salmon</span>
-            <div class="right-part-card">
-              <div onclick="description('idsalmon', 'salmon-text')" class="info-button">info</div>
-              <div onclick="addtocart('Grilled Salmon','Images/salmon.jpg', 20, 'idsalmon')" class="add-button">Add</div>
+          <div class="card main-dish all" style="width: 25%;">
+            <div class="card-img-top beef-kebab-card">
+              <div class="card-description" id="idbeefkebab">
+                <h2 class="card-description-text-heading beef-kebab-text">Ingredients:</h2>
+                <p class="card-description-text-p beef-kebab-text">sirloin steak, red onions, mushrooms, honey, garlic,
+                  ginger</p>
+                <h2 class="card-description-text-heading beef-kebab-text">Price: <span class="card-price">12$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Beef Kebab</span>
+              <div class="right-part-card">
+                <div onclick="description('idbeefkebab', 'beef-kebab-text')" class="info-button">info</div>
+                <div onclick="addtocart('Beef Kebab','Images/beef-kabab.jpg', 12, 'idbeefkebab')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card main-dish all" style="width: 25%;">
-          <div class="card-img-top shrimp-card">
-            <div class="card-description" id="idshrimp">
-              <h2 class="card-description-text-heading shrimp-text">Ingredients:</h2>
-              <p class="card-description-text-p shrimp-text">peeled shrimp, parsley, fresh basil, tomato paste, black
-                pepper</p>
-              <h2 class="card-description-text-heading shrimp-text">Price: <span class="card-price">18$</span></h2>
+          <div class="card main-dish all" style="width: 25%;">
+            <div class="card-img-top chicken-kebab-card">
+              <div class="card-description" id="idchickenkebab">
+                <h2 class="card-description-text-heading chicken-kebab-text">Ingredients:</h2>
+                <p class="card-description-text-p chicken-kebab-text">Chicken thighs, cumin, paprika, cinnamon, dried chilli
+                  flakes, garlic granules, lemon</p>
+                <h2 class="card-description-text-heading chicken-kebab-text">Price: <span class="card-price">12$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Chicken Kebab</span>
+              <div class="right-part-card">
+                <div onclick="description('idchickenkebab', 'chicken-kebab-text')" class="info-button">info</div>
+                <div onclick="addtocart('Chicken Kebab','Images/chicken-kabab.jpg', 12, 'idchickenkebab')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <span class="card-text">Fried Shrimps</span>
-            <div class="right-part-card">
-              <div onclick="description('idshrimp', 'shrimp-text')" class="info-button">info</div>
-              <div onclick="addtocart('Fried Shrimps','Images/shrimp.jpg', 18, 'idshrimp')" class="add-button">Add</div>
+          <div class="card main-dish all" style="width: 25%;">
+            <div class="card-img-top steak-card">
+              <div class="card-description" id="idsteak">
+                <h2 class="card-description-text-heading steak-text">Ingredients:</h2>
+                <p class="card-description-text-p steak-text">Top Sirloin steaks, sea salt, black pepper, garlic, rosemary, unsalted butter</p>
+                <h2 class="card-description-text-heading steak-text">Price: <span class="card-price">17$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Steak</span>
+              <div class="right-part-card">
+                <div onclick="description('idsteak', 'steak-text')" class="info-button">info</div>
+                <div onclick="addtocart('Steak','Images/steak.jpg', 17, 'idsteak')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card main-dish all" style="width: 25%;">
-          <div class="card-img-top beef-kebab-card">
-            <div class="card-description" id="idbeefkebab">
-              <h2 class="card-description-text-heading beef-kebab-text">Ingredients:</h2>
-              <p class="card-description-text-p beef-kebab-text">sirloin steak, red onions, mushrooms, honey, garlic,
-                ginger</p>
-              <h2 class="card-description-text-heading beef-kebab-text">Price: <span class="card-price">12$</span></h2>
+          <div class="card main-dish all" style="width: 25%;">
+            <div class="card-img-top chicken-wings-card">
+              <div class="card-description" id="idchickenwings">
+                <h2 class="card-description-text-heading chicken-wings-text">Ingredients:</h2>
+                <p class="card-description-text-p chicken-wings-text">Chicken wings, baking powder, garlic powder, unsalted
+                  butter, red hot sauce</p>
+                <h2 class="card-description-text-heading chicken-wings-text">Price: <span class="card-price">6$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Chicken Wings</span>
+              <div class="right-part-card">
+                <div onclick="description('idchickenwings', 'chicken-wings-text')" class="info-button">info</div>
+                <div onclick="addtocart('Chicken Wings','Images/wings2.jpg', 6, 'idchickenwings')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <span class="card-text">Beef Kebab</span>
-            <div class="right-part-card">
-              <div onclick="description('idbeefkebab', 'beef-kebab-text')" class="info-button">info</div>
-              <div onclick="addtocart('Beef Kebab','Images/beef-kabab.jpg', 12, 'idbeefkebab')" class="add-button">Add</div>
+          <div class="card main-dish all" style="width: 25%;">
+            <div class="card-img-top sausage-card">
+              <div class="card-description" id="idsausage">
+                <h2 class="card-description-text-heading sausage-text">Ingredients:</h2>
+                <p class="card-description-text-p sausage-text">Turkey, dried sage, ground nutmeg, ground ginger, ground red
+                  pepper flakes</p>
+                <h2 class="card-description-text-heading sausage-text">Price: <span class="card-price">9.5$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Sausages</span>
+              <div class="right-part-card">
+                <div onclick="description('idsausage', 'sausage-text')" class="info-button">info</div>
+                <div onclick="addtocart('Sausages','Images/sausage.jpg', 9, 'idsausage')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card main-dish all" style="width: 25%;">
-          <div class="card-img-top chicken-kebab-card">
-            <div class="card-description" id="idchickenkebab">
-              <h2 class="card-description-text-heading chicken-kebab-text">Ingredients:</h2>
-              <p class="card-description-text-p chicken-kebab-text">Chicken thighs, cumin, paprika, cinnamon, dried chilli
-                flakes, garlic granules, lemon</p>
-              <h2 class="card-description-text-heading chicken-kebab-text">Price: <span class="card-price">12$</span></h2>
+          <div class="card salad all" style="width: 25%;">
+            <div class="card-img-top ceaser-salad-card">
+              <div class="card-description" id="idceasersalad">
+                <h2 class="card-description-text-heading ceaser-salad-text">Ingredients:</h2>
+                <p class="card-description-text-p ceaser-salad-text">Romaine lettuce, parmesan cheese, crisp croutons,
+                  ceaser salad dressing</p>
+                <h2 class="card-description-text-heading ceaser-salad-text">Price: <span class="card-price">3$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Ceaser Salad</span>
+              <div class="right-part-card">
+                <div onclick="description('idceasersalad', 'ceaser-salad-text')" class="info-button">info</div>
+                <div onclick="addtocart('Ceaser Salad','Images/ceaser-salad.jpg', 3, 'idceasersalad')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <span class="card-text">Chicken Kebab</span>
-            <div class="right-part-card">
-              <div onclick="description('idchickenkebab', 'chicken-kebab-text')" class="info-button">info</div>
-              <div onclick="addtocart('Chicken Kebab','Images/chicken-kabab.jpg', 12, 'idchickenkebab')" class="add-button">Add</div>
+          <div class="card salad all" style="width: 25%;">
+            <div class="card-img-top tomato-salad-card">
+              <div class="card-description" id="idtomatosalad">
+                <h2 class="card-description-text-heading tomato-salad-text">Ingredients:</h2>
+                <p class="card-description-text-p tomato-salad-text">Tomatoes, red onion, fresh basil, olive oil, salt &
+                  pepper</p>
+                <h2 class="card-description-text-heading tomato-salad-text">Price: <span class="card-price">3$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Tomato Salad</span>
+              <div class="right-part-card">
+                <div onclick="description('idtomatosalad', 'tomato-salad-text')" class="info-button">info</div>
+                <div onclick="addtocart('Tomato Salad','Images/tomato-salad.jpg', 3, 'idtomatosalad')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card main-dish all" style="width: 25%;">
-          <div class="card-img-top steak-card">
-            <div class="card-description" id="idsteak">
-              <h2 class="card-description-text-heading steak-text">Ingredients:</h2>
-              <p class="card-description-text-p steak-text">Top Sirloin steaks, sea salt, black pepper, garlic, rosemary, unsalted butter</p>
-              <h2 class="card-description-text-heading steak-text">Price: <span class="card-price">17$</span></h2>
+          <div class="card side-dish all" style="width: 25%;">
+            <div class="card-img-top onion-rings-card">
+              <div class="card-description" id="idonionrings">
+                <h2 class="card-description-text-heading onion-rings-text">Ingredients:</h2>
+                <p class="card-description-text-p onion-rings-text">Sweet onion, flour, baking powder, salt, milk, egg, bread crumbs</p>
+                <h2 class="card-description-text-heading onion-rings-text">Price: <span class="card-price">4$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Onion Rings</span>
+              <div class="right-part-card">
+                <div onclick="description('idonionrings', 'onion-rings-text')" class="info-button">info</div>
+                <div onclick="addtocart('Onion Rings','Images/onion-rings.jpg', 4, 'idonionrings')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <span class="card-text">Steak</span>
-            <div class="right-part-card">
-              <div onclick="description('idsteak', 'steak-text')" class="info-button">info</div>
-              <div onclick="addtocart('Steak','Images/steak.jpg', 17, 'idsteak')" class="add-button">Add</div>
+          <div class="card side-dish all" style="width: 25%;">
+            <div class="card-img-top garlic-bread-card">
+              <div class="card-description" id="idgarlicbread">
+                <h2 class="card-description-text-heading garlic-bread-text">Ingredients:</h2>
+                <p class="card-description-text-p garlic-bread-text">Italian bread, unsalted butter, garlic, parsley, Parmesan cheese</p>
+                <h2 class="card-description-text-heading garlic-bread-text">Price: <span class="card-price">4.5$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Garlic Bread</span>
+              <div class="right-part-card">
+                <div onclick="description('idgarlicbread', 'garlic-bread-text')" class="info-button">info</div>
+                <div onclick="addtocart('Garlic Bread','Images/garlic-bread.jpg', 4.5, 'idgarlicbread')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card main-dish all" style="width: 25%;">
-          <div class="card-img-top chicken-wings-card">
-            <div class="card-description" id="idchickenwings">
-              <h2 class="card-description-text-heading chicken-wings-text">Ingredients:</h2>
-              <p class="card-description-text-p chicken-wings-text">Chicken wings, baking powder, garlic powder, unsalted
-                butter, red hot sauce</p>
-              <h2 class="card-description-text-heading chicken-wings-text">Price: <span class="card-price">6$</span></h2>
+          
+          <div class="card side-dish all" style="width: 25%;">
+            <div class="card-img-top wedges-card">
+              <div class="card-description" id="idwedges">
+                <h2 class="card-description-text-heading wedges-text">Ingredients:</h2>
+                <p class="card-description-text-p wedges-text">Potato, salt, pepper, garlic powder, dried oregano, paprika, parmesan cheese</p>
+                <h2 class="card-description-text-heading wedges-text">Price: <span class="card-price">3$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Potato wedges</span>
+              <div class="right-part-card">
+                <div onclick="description('idwedges', 'wedges-text')" class="info-button">info</div>
+                <div onclick="addtocart('Potato wedges','Images/wedges.jpg', 3, 'idwedges')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <span class="card-text">Chicken Wings</span>
-            <div class="right-part-card">
-              <div onclick="description('idchickenwings', 'chicken-wings-text')" class="info-button">info</div>
-              <div onclick="addtocart('Chicken Wings','Images/wings2.jpg', 6, 'idchickenwings')" class="add-button">Add</div>
+          <div class="card dessert all" style="width: 25%;">
+            <div class="card-img-top french-toast-card">
+              <div class="card-description" id="idfrenchtoast">
+                <h2 class="card-description-text-heading french-toast-text">Ingredients:</h2>
+                <p class="card-description-text-p french-toast-text">Egg, cinnamon, milk, bread, maple syrup</p>
+                <h2 class="card-description-text-heading french-toast-text">Price: <span class="card-price">6$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">French Toast</span>
+              <div class="right-part-card">
+                <div onclick="description('idfrenchtoast', 'french-toast-text')" class="info-button">info</div>
+                <div onclick="addtocart('French Toast','Images/french-toast.jpg', 6, 'idfrenchtoast')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card main-dish all" style="width: 25%;">
-          <div class="card-img-top sausage-card">
-            <div class="card-description" id="idsausage">
-              <h2 class="card-description-text-heading sausage-text">Ingredients:</h2>
-              <p class="card-description-text-p sausage-text">Turkey, dried sage, ground nutmeg, ground ginger, ground red
-                pepper flakes</p>
-              <h2 class="card-description-text-heading sausage-text">Price: <span class="card-price">9.5$</span></h2>
+          <div class="card dessert all" style="width: 25%;">
+            <div class="card-img-top crepe-card">
+              <div class="card-description" id="idcrepe">
+                <h2 class="card-description-text-heading crepe-text">Ingredients:</h2>
+                <p class="card-description-text-p crepe-text">Flour, eggs, water, melted butter, nutella spread</p>
+                <h2 class="card-description-text-heading crepe-text">Price: <span class="card-price">5$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Chocolate Crepe</span>
+              <div class="right-part-card">
+                <div onclick="description('idcrepe', 'crepe-text')" class="info-button">info</div>
+                <div onclick="addtocart('Crepe','Images/crepe.jpg', 5, 'idcrepe')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <span class="card-text">Sausages</span>
-            <div class="right-part-card">
-              <div onclick="description('idsausage', 'sausage-text')" class="info-button">info</div>
-              <div onclick="addtocart('Sausages','Images/sausage.jpg', 9, 'idsausage')" class="add-button">Add</div>
+          <div class="card dessert all" style="width: 25%;">
+            <div class="card-img-top cheese-cake-card">
+              <div class="card-description" id="idcheesecake">
+                <h2 class="card-description-text-heading cheese-cake-text">Ingredients:</h2>
+                <p class="card-description-text-p cheese-cake-text">Flour, eggs, granulated sugar, lemon juice, sour cream, unsalted butter, blueberry toppings</p>
+                <h2 class="card-description-text-heading cheese-cake-text">Price: <span class="card-price">6$</span></h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-text">Cheese cake</span>
+              <div class="right-part-card">
+                <div onclick="description('idcheesecake', 'cheese-cake-text')" class="info-button">info</div>
+                <div onclick="addtocart('Cheese Cake','Images/cheesecake.jpg', 6, 'idcheesecake')" class="add-button">Add</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card salad all" style="width: 25%;">
-          <div class="card-img-top ceaser-salad-card">
-            <div class="card-description" id="idceasersalad">
-              <h2 class="card-description-text-heading ceaser-salad-text">Ingredients:</h2>
-              <p class="card-description-text-p ceaser-salad-text">Romaine lettuce, parmesan cheese, crisp croutons,
-                ceaser salad dressing</p>
-              <h2 class="card-description-text-heading ceaser-salad-text">Price: <span class="card-price">3$</span></h2>
+          <div class="card dessert all" style="width: 25%;">
+            <div class="card-img-top lava-cake-card">
+              <div class="card-description" id="idlavacake">
+                <h2 class="card-description-text-heading lava-cake-text">Ingredients:</h2>
+                <p class="card-description-text-p lava-cake-text">Bittersweet chocolate, eggs, sugar, flour, unsalted butter</p>
+                <h2 class="card-description-text-heading lava-cake-text">Price: <span class="card-price">8$</span></h2>
+              </div>
             </div>
-          </div>
-          <div class="card-body">
-            <span class="card-text">Ceaser Salad</span>
-            <div class="right-part-card">
-              <div onclick="description('idceasersalad', 'ceaser-salad-text')" class="info-button">info</div>
-              <div onclick="addtocart('Ceaser Salad','Images/ceaser-salad.jpg', 3, 'idceasersalad')" class="add-button">Add</div>
+            <div class="card-body">
+              <span class="card-text">Lava Cake</span>
+              <div class="right-part-card">
+                <div onclick="description('idlavacake', 'lava-cake-text')" class="info-button">info</div>
+                <div onclick="addtocart('Lava Cake','Images/lava-cake.jpg', 8, 'idlavacake')" class="add-button">Add</div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="card salad all" style="width: 25%;">
-          <div class="card-img-top tomato-salad-card">
-            <div class="card-description" id="idtomatosalad">
-              <h2 class="card-description-text-heading tomato-salad-text">Ingredients:</h2>
-              <p class="card-description-text-p tomato-salad-text">Tomatoes, red onion, fresh basil, olive oil, salt &
-                pepper</p>
-              <h2 class="card-description-text-heading tomato-salad-text">Price: <span class="card-price">3$</span></h2>
-            </div>
-          </div>
-          <div class="card-body">
-            <span class="card-text">Tomato Salad</span>
-            <div class="right-part-card">
-              <div onclick="description('idtomatosalad', 'tomato-salad-text')" class="info-button">info</div>
-              <div onclick="addtocart('Tomato Salad','Images/tomato-salad.jpg', 3, 'idtomatosalad')" class="add-button">Add</div>
-            </div>
-          </div>
-        </div>
-        <div class="card side-dish all" style="width: 25%;">
-          <div class="card-img-top onion-rings-card">
-            <div class="card-description" id="idonionrings">
-              <h2 class="card-description-text-heading onion-rings-text">Ingredients:</h2>
-              <p class="card-description-text-p onion-rings-text">Sweet onion, flour, baking powder, salt, milk, egg, bread crumbs</p>
-              <h2 class="card-description-text-heading onion-rings-text">Price: <span class="card-price">4$</span></h2>
-            </div>
-          </div>
-          <div class="card-body">
-            <span class="card-text">Onion Rings</span>
-            <div class="right-part-card">
-              <div onclick="description('idonionrings', 'onion-rings-text')" class="info-button">info</div>
-              <div onclick="addtocart('Onion Rings','Images/onion-rings.jpg', 4, 'idonionrings')" class="add-button">Add</div>
-            </div>
-          </div>
-        </div>
-        <div class="card side-dish all" style="width: 25%;">
-          <div class="card-img-top garlic-bread-card">
-            <div class="card-description" id="idgarlicbread">
-              <h2 class="card-description-text-heading garlic-bread-text">Ingredients:</h2>
-              <p class="card-description-text-p garlic-bread-text">Italian bread, unsalted butter, garlic, parsley, Parmesan cheese</p>
-              <h2 class="card-description-text-heading garlic-bread-text">Price: <span class="card-price">4.5$</span></h2>
-            </div>
-          </div>
-          <div class="card-body">
-            <span class="card-text">Garlic Bread</span>
-            <div class="right-part-card">
-              <div onclick="description('idgarlicbread', 'garlic-bread-text')" class="info-button">info</div>
-              <div onclick="addtocart('Garlic Bread','Images/garlic-bread.jpg', 4.5, 'idgarlicbread')" class="add-button">Add</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="card side-dish all" style="width: 25%;">
-          <div class="card-img-top wedges-card">
-            <div class="card-description" id="idwedges">
-              <h2 class="card-description-text-heading wedges-text">Ingredients:</h2>
-              <p class="card-description-text-p wedges-text">Potato, salt, pepper, garlic powder, dried oregano, paprika, parmesan cheese</p>
-              <h2 class="card-description-text-heading wedges-text">Price: <span class="card-price">3$</span></h2>
-            </div>
-          </div>
-          <div class="card-body">
-            <span class="card-text">Potato wedges</span>
-            <div class="right-part-card">
-              <div onclick="description('idwedges', 'wedges-text')" class="info-button">info</div>
-              <div onclick="addtocart('Potato wedges','Images/wedges.jpg', 3, 'idwedges')" class="add-button">Add</div>
-            </div>
-          </div>
-        </div>
-        <div class="card dessert all" style="width: 25%;">
-          <div class="card-img-top french-toast-card">
-            <div class="card-description" id="idfrenchtoast">
-              <h2 class="card-description-text-heading french-toast-text">Ingredients:</h2>
-              <p class="card-description-text-p french-toast-text">Egg, cinnamon, milk, bread, maple syrup</p>
-              <h2 class="card-description-text-heading french-toast-text">Price: <span class="card-price">6$</span></h2>
-            </div>
-          </div>
-          <div class="card-body">
-            <span class="card-text">French Toast</span>
-            <div class="right-part-card">
-              <div onclick="description('idfrenchtoast', 'french-toast-text')" class="info-button">info</div>
-              <div onclick="addtocart('French Toast','Images/french-toast.jpg', 6, 'idfrenchtoast')" class="add-button">Add</div>
-            </div>
-          </div>
-        </div>
-        <div class="card dessert all" style="width: 25%;">
-          <div class="card-img-top crepe-card">
-            <div class="card-description" id="idcrepe">
-              <h2 class="card-description-text-heading crepe-text">Ingredients:</h2>
-              <p class="card-description-text-p crepe-text">Flour, eggs, water, melted butter, nutella spread</p>
-              <h2 class="card-description-text-heading crepe-text">Price: <span class="card-price">5$</span></h2>
-            </div>
-          </div>
-          <div class="card-body">
-            <span class="card-text">Chocolate Crepe</span>
-            <div class="right-part-card">
-              <div onclick="description('idcrepe', 'crepe-text')" class="info-button">info</div>
-              <div onclick="addtocart('Crepe','Images/crepe.jpg', 5, 'idcrepe')" class="add-button">Add</div>
-            </div>
-          </div>
-        </div>
-        <div class="card dessert all" style="width: 25%;">
-          <div class="card-img-top cheese-cake-card">
-            <div class="card-description" id="idcheesecake">
-              <h2 class="card-description-text-heading cheese-cake-text">Ingredients:</h2>
-              <p class="card-description-text-p cheese-cake-text">Flour, eggs, granulated sugar, lemon juice, sour cream, unsalted butter, blueberry toppings</p>
-              <h2 class="card-description-text-heading cheese-cake-text">Price: <span class="card-price">6$</span></h2>
-            </div>
-          </div>
-          <div class="card-body">
-            <span class="card-text">Cheese cake</span>
-            <div class="right-part-card">
-              <div onclick="description('idcheesecake', 'cheese-cake-text')" class="info-button">info</div>
-              <div onclick="addtocart('Cheese Cake','Images/cheesecake.jpg', 6, 'idcheesecake')" class="add-button">Add</div>
-            </div>
-          </div>
-        </div>
-        <div class="card dessert all" style="width: 25%;">
-          <div class="card-img-top lava-cake-card">
-            <div class="card-description" id="idlavacake">
-              <h2 class="card-description-text-heading lava-cake-text">Ingredients:</h2>
-              <p class="card-description-text-p lava-cake-text">Bittersweet chocolate, eggs, sugar, flour, unsalted butter</p>
-              <h2 class="card-description-text-heading lava-cake-text">Price: <span class="card-price">8$</span></h2>
-            </div>
-          </div>
-          <div class="card-body">
-            <span class="card-text">Lava Cake</span>
-            <div class="right-part-card">
-              <div onclick="description('idlavacake', 'lava-cake-text')" class="info-button">info</div>
-              <div onclick="addtocart('Lava Cake','Images/lava-cake.jpg', 8, 'idlavacake')" class="add-button">Add</div>
-            </div>
-          </div>
-        </div>
       </div>
       
     </div>
@@ -425,6 +425,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+    </div>
   </main>
 </body>
 
