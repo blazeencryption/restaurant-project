@@ -442,8 +442,9 @@ nav {
   align-items: center;
 }
 .menu-page {
-  
   width: 100%;
+  min-height:100vh;
+  display:block;
   background-color: rgb(161, 130, 98); /*Change later*/
 }
 main {
@@ -522,7 +523,7 @@ main {
   justify-content: space-evenly;
 }
 #items-section {
-  min-height: 300px;
+  min-height:300px;
   height: auto !important;
   width:100%;
   padding-top: 150px;

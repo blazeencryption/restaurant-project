@@ -116,7 +116,7 @@ function reveal_class(category_class) {
     card.style.display="none";
   })
   Array.from(categoryelements).forEach(cat_element => {
-    cat_element.style.display="block";
+    cat_element.style.display="flex";
   });
 }
 
@@ -159,7 +159,7 @@ function remove_popup() {
 function opencat() {
   if (opened_cat === 'closed') {
     document.getElementById('responsive-elements').style.display="block";
-    document.getElementById('down-arrow').innerHTML='⮾';
+    document.getElementById('down-arrow').innerHTML='X';
     opened_cat = 'opened';
   } else {
     document.getElementById('down-arrow').innerHTML="▼";
